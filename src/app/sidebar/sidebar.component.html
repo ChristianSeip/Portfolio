@@ -1,0 +1,37 @@
+<aside>
+  <header>
+    <h1 class="ff-arizonia"><a routerLink="/home">Christian Seip</a></h1>
+    <nav class="main-navigation">
+      <ul>
+        <li>
+          <a routerLink="/home" [ngClass]="{'active': router.url === '/'} ">
+            <mat-icon class="menu-icon">home</mat-icon> Home
+          </a>
+          </li>
+        <li>
+          <a routerLink="/about" [ngClass]="{'active': router.url === '/about'}">
+            <mat-icon class="menu-icon">person</mat-icon> About
+          </a>
+        </li>
+        <li>
+          <a routerLink="/portfolio" [ngClass]="{'active': router.url === '/portfolio'}">
+            <mat-icon class="menu-icon">work</mat-icon> Portfolio
+            </a>
+        </li>
+        <li>
+          <a routerLink="/contact" [ngClass]="{'active': router.url === '/contact'}">
+            <mat-icon class="menu-icon">question_answer</mat-icon> Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <footer>
+    <nav class="footer-navigation">
+      <ul>
+        <li><a routerLink="/legal-notice">Legal Notice</a></li>
+        <li><a routerLink="/privacy">Privacy</a></li>
+      </ul>
+    </nav>
+  </footer>
+</aside>

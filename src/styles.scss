@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --text-color: #e5e5e5;
+  --primary-color: #7413e7;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+  scrollbar-color: #888888 #555555; /* thumb and track color */
+  scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  font-family: Lato, "Helvetica Neue", sans-serif;
+  background-image: linear-gradient(#0f0f0f, #1f1f1f, #151515);
+  color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+  width: .6rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #888888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+.ff-arizonia {
+  font-family: Arizonia;
+}
