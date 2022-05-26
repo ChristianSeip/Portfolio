@@ -13,6 +13,7 @@ import { LegalNoticeComponent } from './pages/legal-notice/legal-notice.componen
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -26,12 +27,13 @@ import {MatIconModule} from "@angular/material/icon";
     PrivacyComponent,
     NotFoundComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatButtonModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

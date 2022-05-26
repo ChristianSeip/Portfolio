@@ -3,7 +3,11 @@
 }
 
 main {
-  height: 100vh;
+  height: calc(100vh - 10rem);
   overflow-y: auto;
   overflow-x: hidden;
+  padding-top: 5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 5rem;
 }

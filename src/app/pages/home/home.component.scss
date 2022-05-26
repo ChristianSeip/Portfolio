@@ -1,0 +1,48 @@
+.content-container {
+  display: flex;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 3rem;
+}
+
+.photo-container {
+  img {
+    height: 300px;
+    width: 275px;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: -50px -50px 0 -40px var(--primary-color), 50px 50px 0 -40px var(--primary-color);
+    padding: 2rem;
+  }
+}
+
+.typing-box {
+  display: flex;
+  align-items: center;
+}
+
+.typing {
+  display: inline-block;
+  width: 12ch;
+  animation: typing-animation 1.5s steps(14), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: var(--text-color) 3px solid;
+  margin-left: 1ch;
+}
+
+@keyframes typing-animation {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
