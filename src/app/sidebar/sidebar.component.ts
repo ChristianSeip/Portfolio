@@ -1,5 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {trigger, state, style, animate, transition, keyframes} from '@angular/animations';
 import {BreakpointObserver, BreakpointState} from "@angular/cdk/layout";
 
@@ -32,8 +32,9 @@ import {BreakpointObserver, BreakpointState} from "@angular/cdk/layout";
 export class SidebarComponent implements OnInit {
 
   isOpen: boolean = true;
+  page: any;
 
-  constructor(public router: Router, private breakpointObserver: BreakpointObserver,) {
+  constructor(private router: Router, private route: ActivatedRoute, private breakpointObserver: BreakpointObserver,) {
     this.breakpointObserver.observe(["(max-width: 768px)"]).subscribe((result: BreakpointState) => {
       if(result.matches && this.isOpen) {
         this.toggle();
@@ -42,6 +43,12 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.route.fragment.subscribe((fragment:any) => {
+      this.page = fragment;
+      if(this.page === '' || this.page === null) {
+        this.page = 'home';
+      }
+    });
   }
 
   toggle() {

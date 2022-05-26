@@ -10,22 +10,22 @@
     <nav class="main-navigation">
       <ul>
         <li>
-          <a routerLink="/home" [ngClass]="{'active': router.url === '/'} ">
+          <a href="#home" [ngClass]="{'active': page === 'home'} ">
             <mat-icon class="menu-icon">home</mat-icon> Home
           </a>
           </li>
         <li>
-          <a routerLink="/about" [ngClass]="{'active': router.url === '/about'}">
+          <a href="#about" [ngClass]="{'active': page === 'about'}">
             <mat-icon class="menu-icon">person</mat-icon> About
           </a>
         </li>
         <li>
-          <a routerLink="/portfolio" [ngClass]="{'active': router.url === '/portfolio'}">
+          <a href="#portfolio" [ngClass]="{'active': page === 'portfolio'}">
             <mat-icon class="menu-icon">work</mat-icon> Portfolio
             </a>
         </li>
         <li>
-          <a routerLink="/contact" [ngClass]="{'active': router.url === '/contact'}">
+          <a href="#contact" [ngClass]="{'active': page === 'contact'}">
             <mat-icon class="menu-icon">question_answer</mat-icon> Contact
           </a>
         </li>

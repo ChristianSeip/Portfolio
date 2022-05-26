@@ -14,6 +14,7 @@ import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import { PageContainerComponent } from './page-container/page-container.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MatButtonModule} from "@angular/material/button";
     ContactComponent,
     LegalNoticeComponent,
     PrivacyComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PageContainerComponent
   ],
     imports: [
         BrowserModule,

@@ -1,0 +1,6 @@
+<div [@switchpage]="switch ? 'change' : 'normal'" class="page-container">
+  <app-home *ngIf="page === 'home'"></app-home>
+  <app-about *ngIf="page === 'about'"></app-about>
+  <app-portfolio *ngIf="page === 'portfolio'"></app-portfolio>
+  <app-contact *ngIf="page === 'contact'"></app-contact>
+</div>
