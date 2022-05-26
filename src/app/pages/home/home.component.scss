@@ -5,8 +5,11 @@
 .intro-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin-right: 3rem;
+}
+
+.button-box {
+  margin-top: 3rem;
 }
 
 .photo-container {
@@ -23,13 +26,14 @@
 .typing-box {
   display: flex;
   align-items: center;
+  white-space: nowrap;
+  width: 20ch;
 }
 
 .typing {
   display: inline-block;
   width: 12ch;
   animation: typing-animation 1.5s steps(14), blink .5s step-end infinite alternate;
-  white-space: nowrap;
   overflow: hidden;
   border-right: var(--text-color) 3px solid;
   margin-left: 1ch;
@@ -45,4 +49,47 @@
   50% {
     border-color: transparent
   }
+}
+
+@media screen and (max-width: 900px) {
+  .photo-container {
+    img {
+      height: 150px;
+      width: 137px;
+      box-shadow: -25px -25px 0 -20px var(--primary-color), 25px 25px 0 -20px var(--primary-color);
+      padding: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro-container {
+    margin-right: 1.5rem;
+  }
+
+  .photo-container {
+    img {
+      height: 100px;
+      width: 92px;
+      box-shadow: -17px -17px 0 -13px var(--primary-color), 17px 17px 0 -13px var(--primary-color);
+      padding: .7rem;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .photo-container {
+    img {
+      height: 150px;
+      width: 137px;
+      box-shadow: -25px -25px 0 -20px var(--primary-color), 25px 25px 0 -20px var(--primary-color);
+      padding: 1rem;
+    }
+  }
+
 }

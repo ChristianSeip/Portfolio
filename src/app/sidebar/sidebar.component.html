@@ -1,4 +1,10 @@
-<aside>
+<div class="menu-button-container">
+  <button mat-mini-fab color="primary" (click)="toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</div>
+
+<aside [@openClose]="isOpen ? 'open' : 'closed'">
   <header>
     <h1 class="ff-arizonia"><a routerLink="/home">Christian Seip</a></h1>
     <nav class="main-navigation">
