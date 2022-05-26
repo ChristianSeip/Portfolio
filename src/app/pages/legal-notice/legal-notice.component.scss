@@ -1,0 +1,17 @@
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+dt {
+  margin-top: 1rem;
+  color: var(--secondary-color);
+}
+
+dd {
+  margin-left: 0;
+  margin-top: .25rem;
+}
