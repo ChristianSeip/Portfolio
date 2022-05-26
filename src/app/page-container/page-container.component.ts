@@ -35,7 +35,6 @@ export class PageContainerComponent implements OnInit {
         this.page = 'home';
       }
       this.switch = true;
-      console.log(this.switch);
       setTimeout(() => {
         this.switch = false;
       }, 500)
