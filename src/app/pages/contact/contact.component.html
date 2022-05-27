@@ -6,7 +6,7 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Your Name</mat-label>
-        <input type="text" matInput placeholder="Name" [(ngModel)]="name" value="{{name}}">
+        <input type="text" matInput placeholder="Name" [(ngModel)]="name" value="{{name}}" minlength="3" maxlength="50">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint [@validator]="isValidName() ? 'valid' : 'invalid'">Insert your Name (3 - 50 Characters)</mat-hint>
       </mat-form-field>
@@ -15,7 +15,7 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>E-Mail Address</mat-label>
-        <input type="email" matInput placeholder="name@example.com" [(ngModel)]="mail" value="{{mail}}">
+        <input type="email" matInput placeholder="name@example.com" [(ngModel)]="mail" value="{{mail}}" maxlength="65">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint [@validator]="isValidMail() ? 'valid' : 'invalid'">Insert your Mail Address (max. 65 Characters)</mat-hint>
       </mat-form-field>
@@ -24,7 +24,7 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Phone</mat-label>
-        <input type="telephone" matInput placeholder="+491234567890" [(ngModel)]="phone" value="{{phone}}">
+        <input type="telephone" matInput placeholder="+491234567890" [(ngModel)]="phone" value="{{phone}}" maxlength="17">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>Insert your Phone Number</mat-hint>
       </mat-form-field>
