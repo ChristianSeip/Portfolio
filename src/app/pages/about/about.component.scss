@@ -1,0 +1,92 @@
+.inner-container {
+  display: flex;
+}
+
+.intro {
+  margin-right: 2rem;
+}
+
+.button-link {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.skills {
+  list-style-type: none;
+  padding: 0;
+  width: 360px;
+  li {
+    width: 95px;
+    display: inline-block;
+    margin: .75rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-color);
+  color: #171717;
+  border-radius: .5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+.skill-logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -20px;
+  height: 40px;
+  width: 40px;
+  background-color: var(--text-color);
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 10px 14px 5px rgba(77,77,77,0);
+  box-shadow: 0px 10px 13px -7px #000000, 0px 10px 14px 5px rgba(77,77,77,0);
+  img {
+    height: 24px;
+    width: 24px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .inner-container {
+    flex-direction: column;
+  }
+
+  .my-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-link {
+    display: block;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills {
+    width: 100%;
+    li {
+      font-size: .9rem;
+    }
+  }
+}
