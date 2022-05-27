@@ -15,6 +15,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import { PageContainerComponent } from './page-container/page-container.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -29,13 +32,16 @@ import { PageContainerComponent } from './page-container/page-container.componen
     NotFoundComponent,
     PageContainerComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatIconModule,
-        MatButtonModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

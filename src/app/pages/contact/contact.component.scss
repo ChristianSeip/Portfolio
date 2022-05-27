@@ -1,0 +1,30 @@
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  &:hover {
+    color: var(--secondary-color);
+  }
+}
+
+.contact-form {
+  width: 50%;
+  background-color: var(--text-color);
+  border-radius: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #1f1f1f;
+}
+
+.form-buttons {
+  text-align: center;
+  button:not(:last-child) {
+    margin-right: .75rem;
+  }
+}
+
+mat-form-field {
+  width: 100%;
+}
+

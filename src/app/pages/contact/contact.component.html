@@ -1,1 +1,48 @@
-<p>contact works!</p>
+<div>
+  <h2>Contact me</h2>
+  <p>Get in touch via the form below, or by emailing <a href="mailto:hello@seip.io">hello@seip.io</a></p>
+
+  <div class="contact-form">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Your Name</mat-label>
+        <input matInput placeholder="Name" [(ngModel)]="name" value="{{name}}" required>
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint [@validator]="isValidName() ? 'valid' : 'invalid'">Insert your Name (3 - 50 Characters)</mat-hint>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>E-Mail Address</mat-label>
+        <input matInput placeholder="name@example.com" [(ngModel)]="mail" value="{{mail}}" required>
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint [@validator]="isValidMail() ? 'valid' : 'invalid'">Insert your Mail Address (max. 65 Characters)</mat-hint>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput placeholder="+491234567890" [(ngModel)]="phone" value="{{phone}}">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint class="validatorMessage"></mat-hint>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Your Message</mat-label>
+        <textarea matInput placeholder="Your Message" [(ngModel)]="message" required>{{message}}</textarea>
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint [@validator]="isValidMessage() ? 'valid' : 'invalid'">{{message.length}}/1000 Characters</mat-hint>
+      </mat-form-field>
+    </p>
+
+
+    <p class="form-buttons">
+      <button mat-stroked-button color="primary">Send</button>
+      <button mat-raised-button color="warn" (click)="resetForm()">Reset</button>
+    </p>
+  </div>
+</div>

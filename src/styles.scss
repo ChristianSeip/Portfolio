@@ -1,3 +1,5 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 :root {
   --text-color: #e5e5e5;
   --primary-color: #673ab7;
@@ -56,3 +58,6 @@ h2 {
   background-size: 100% .25rem;
   background-repeat: repeat-x;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
