@@ -35,7 +35,7 @@ export class SidebarComponent implements OnInit {
   page: any;
 
   constructor(private router: Router, private route: ActivatedRoute, private breakpointObserver: BreakpointObserver,) {
-    this.breakpointObserver.observe(["(max-width: 768px)"]).subscribe((result: BreakpointState) => {
+    this.breakpointObserver.observe(["(max-width: 960px)"]).subscribe((result: BreakpointState) => {
       if(result.matches && this.isOpen) {
         this.toggle();
       }
