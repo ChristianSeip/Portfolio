@@ -48,6 +48,17 @@ export class ContactComponent implements OnInit {
   }
 
   /**
+   * Check if form has a valid name.
+   */
+  isValidPhone(): boolean {
+    this.phone = this.phone.trim();
+    if(this.phone.length > 17) {
+      return false;
+    }
+    return true;
+  }
+
+  /**
    * Check if form has a valid mail.
    */
   isValidMail(): boolean {
