@@ -1,5 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {animate, keyframes, state, style, transition, trigger} from "@angular/animations";
+import {state, style, trigger} from "@angular/animations";
+import {FormService} from "../../form.service";
+import {MatDialog} from "@angular/material/dialog";
+import {DialogComponent} from "../../dialog/dialog.component";
 
 @Component({
   selector: 'app-contact',
@@ -22,7 +25,7 @@ export class ContactComponent implements OnInit {
   @Input() phone: string = '';
   @Input() message: string = '';
 
-  constructor() { }
+  constructor(private formService: FormService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -86,4 +89,25 @@ export class ContactComponent implements OnInit {
     return false;
   }
 
+  /**
+   * Check if form is valid.
+   */
+  isValidForm(): boolean {
+    return this.isValidName() && this.isValidMail() && this.isValidMessage();
+  }
+
+  /**
+   * Send form and open dialog to show response.
+   */
+  sendForm(): void {
+    this.formService.senForm(this.name, this.mail, this.phone, this.message).subscribe((response: any) => {
+      if(response.success) {
+        this.resetForm();
+      }
+
+      this.dialog.open(DialogComponent, {
+        data: response
+      });
+    });
+  }
 }

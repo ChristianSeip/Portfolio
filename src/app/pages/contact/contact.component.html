@@ -41,7 +41,7 @@
 
 
     <p class="form-buttons">
-      <button mat-stroked-button color="primary">Send</button>
+      <button mat-stroked-button color="primary" [disabled]="!isValidForm()" (click)="sendForm()">Send</button>
       <button mat-raised-button color="warn" (click)="resetForm()">Reset</button>
     </p>
   </div>
