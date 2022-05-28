@@ -13,7 +13,7 @@ import {trigger, state, style, animate, transition, keyframes} from '@angular/an
       state('change', style({
       })),
       transition('normal => change', [
-        animate("300ms", keyframes([
+        animate("400ms", keyframes([
           style({ transform: 'scaleX(0)', transformOrigin: '100% 100%'}),
           style({ transform: 'scaleX(1)', transformOrigin: '100% 100%'}),
         ]))
