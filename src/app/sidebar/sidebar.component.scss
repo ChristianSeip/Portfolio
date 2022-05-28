@@ -23,15 +23,17 @@ aside {
       margin: 0;
       padding: 0;
     }
-    img {
-      height: 64px;
-    }
   }
 
   a {
     color: var(--text-color);
     text-decoration: none;
   }
+}
+
+.logo {
+  width: 140px;
+  object-fit: cover;
 }
 
 .main-navigation {
