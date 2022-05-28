@@ -68,11 +68,30 @@ aside {
     padding: 0;
     li {
       display: inline-block;
-      &:not(:last-child):after {
-        content: '|';
-        padding-left: .5rem;
-        padding-right: .5rem;
-      }
+    }
+  }
+}
+
+.social-media-links {
+  text-align: center;
+  li {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  img {
+    height: 32px;
+    width: 32px;
+    object-fit: cover;
+  }
+}
+
+.legal-links {
+  li {
+    &:not(:last-child):after {
+      content: '|';
+      padding-left: .5rem;
+      padding-right: .5rem;
     }
   }
   a:hover {
