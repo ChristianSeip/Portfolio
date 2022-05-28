@@ -11,4 +11,7 @@ dd {
 .attribution-list {
   list-style-type: none;
   padding: 0;
+  li {
+    margin-bottom: .5rem;
+  }
 }
