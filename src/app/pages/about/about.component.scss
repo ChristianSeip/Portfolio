@@ -4,6 +4,7 @@
 
 .intro {
   margin-right: 2rem;
+  max-width: 800px;
 }
 
 .button-link {
@@ -66,7 +67,7 @@
 
 @media screen and (max-width: 900px) {
   .inner-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .my-skills {
