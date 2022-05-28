@@ -13,9 +13,9 @@ import {trigger, state, style, animate, transition, keyframes} from '@angular/an
       state('change', style({
       })),
       transition('normal => change', [
-        animate(".5s", keyframes([
-          style({ opacity: 0, transform: 'rotateY(-100deg)', transformOrigin: 'right'}),
-          style({ opacity: 1, transform: 'rotateY(0)', transformOrigin: 'right'}),
+        animate("300ms", keyframes([
+          style({ transform: 'scaleX(0)', transformOrigin: '100% 100%'}),
+          style({ transform: 'scaleX(1)', transformOrigin: '100% 100%'}),
         ]))
       ]),
     ]),
