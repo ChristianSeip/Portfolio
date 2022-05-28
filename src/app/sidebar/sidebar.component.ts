@@ -33,11 +33,14 @@ export class SidebarComponent implements OnInit {
 
   isOpen: boolean = true;
   page: any;
+  width: number = 0;
 
   constructor(private router: Router, private route: ActivatedRoute, private breakpointObserver: BreakpointObserver,) {
+    this.width = window.innerWidth;
     this.breakpointObserver.observe(["(max-width: 960px)"]).subscribe((result: BreakpointState) => {
+      this.width = window.innerWidth;
       if(result.matches && this.isOpen) {
-        this.toggle();
+        this.toggle(true);
       }
     });
   }
@@ -51,7 +54,10 @@ export class SidebarComponent implements OnInit {
     });
   }
 
-  toggle() {
+  toggle(force: boolean) {
+    if(!force && this.width > 600) {
+      return;
+    }
     this.isOpen = !this.isOpen;
   }
 
