@@ -33,7 +33,7 @@
 
 .typing {
   display: inline-block;
-  width: 12ch;
+  width: 13ch;
   animation: typing-animation 1.5s steps(14), blink .5s step-end infinite alternate;
   overflow: hidden;
   border-right: var(--text-color) 3px solid;
