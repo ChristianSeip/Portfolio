@@ -3,6 +3,7 @@ import {state, style, trigger} from "@angular/animations";
 import {FormService} from "../../form.service";
 import {MatDialog} from "@angular/material/dialog";
 import {DialogComponent} from "../../dialog/dialog.component";
+import {PageTitleService} from "../../page-title.service";
 
 @Component({
   selector: 'app-contact',
@@ -25,9 +26,10 @@ export class ContactComponent implements OnInit {
   @Input() phone: string = '';
   @Input() message: string = '';
 
-  constructor(private formService: FormService, public dialog: MatDialog) { }
+  constructor(private formService: FormService, public dialog: MatDialog, private pageTitleService: PageTitleService) { }
 
   ngOnInit(): void {
+    this.pageTitleService.set('Contact');
   }
 
   resetForm() {

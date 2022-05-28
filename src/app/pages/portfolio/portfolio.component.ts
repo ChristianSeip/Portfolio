@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {trigger, state, style, animate, transition, keyframes} from '@angular/animations';
+import {PageTitleService} from "../../page-title.service";
 
 @Component({
   selector: 'app-portfolio',
@@ -31,9 +32,10 @@ export class PortfolioComponent implements OnInit {
 
   showDesc = [false, false];
 
-  constructor() { }
+  constructor(private pageTitleService: PageTitleService) { }
 
   ngOnInit(): void {
+    this.pageTitleService.set('Portfolio');
   }
 
   toggleVisibility(id: number) {
