@@ -14,6 +14,8 @@
 }
 
 .photo-container {
+  display: flex;
+  justify-content: center;
   img {
     height: 300px;
     width: 275px;
