@@ -15,13 +15,13 @@ import {BreakpointObserver, BreakpointState} from "@angular/cdk/layout";
         display: 'none'
       })),
       transition('open => closed', [
-        animate("1s", keyframes([
+        animate("400ms", keyframes([
           style({ opacity: 1, transform: 'translateX(0)'}),
           style({ opacity: 0, transform: 'translateX(-250px)'}),
         ]))
       ]),
       transition('closed => open', [
-        animate("1s", keyframes([
+        animate("400ms", keyframes([
           style({ display: 'flex', opacity: 0, transform: 'translateX(-250px)'}),
           style({ opacity: 1, transform: 'translateX(0)'}),
         ]))
