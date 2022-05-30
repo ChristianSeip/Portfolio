@@ -23,5 +23,14 @@
         </a>
       </div>
     </li>
+    <li (mouseenter)="toggleVisibility(2)" (mouseleave)="toggleVisibility(2)">
+      <div class="preview">
+        <div class="preview-description-box" [@showHide]="showDesc[2] ? 'show' : 'hide'">
+          <h3>Portfolio Website</h3>
+          <p>The portfolio you're looking right now. Based on Angular and PHP.</p>
+        </div>
+        <img src="assets/images/previews/portfolio.png" alt="Preview of my portfolio website">
+      </div>
+    </li>
   </ul>
 </div>
