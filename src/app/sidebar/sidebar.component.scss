@@ -15,6 +15,7 @@ aside {
   padding-right: 2.5rem;
   border-right: #494949 1px solid;
   width: calc(240px - 5rem);
+  overflow: auto;
 
   header {
     margin-top: 2.5rem;
@@ -110,7 +111,18 @@ aside {
     top: 0;
     right: 0;
     left: 0;
-    bottom: 0;
     padding: 0;
+  }
+
+  .main-navigation {
+    margin-top: 2.5rem;
+  }
+
+  .social-media-links {
+    img {
+      height: 24px;
+      width: 24px;
+      object-fit: cover;
+    }
   }
 }
