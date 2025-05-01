@@ -1,0 +1,24 @@
+<section class="relative px-6 py-24 md:px-12 max-w-6xl mx-auto text-center overflow-hidden">
+
+  <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12 animate-fade-in tracking-tight">
+    Meine Projekte
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 animate-slide-fade-in-up">
+    <app-project-card
+      *ngFor="let project of projects"
+      [title]="project.title"
+      [description]="project.shortDescription"
+      [imageUrl]="project.imageUrl"
+      [githubUrl]="project.githubUrl"
+      [liveUrl]="project.demoUrl"
+      [detailsUrl]="'/projects/' + getSlug(project)">
+    </app-project-card>
+  </div>
+
+  <p class="mt-16 text-lg text-gray-600 italic animate-fade-in">
+    Jedes Projekt ist maßgeschneidert – mit Liebe zum Code und einem Blick fürs Detail.
+  </p>
+
+  <app-contact-form></app-contact-form>
+</section>

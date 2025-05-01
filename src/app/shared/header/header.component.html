@@ -1,0 +1,50 @@
+<header class="w-full px-4 py-6 bg-white z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+    <div class="h-8 w-auto">
+      <img src="https://static.seip.io/images/logos/seip_io_main_logo_black.svg"
+           alt="Christian Seip Logo"
+           class="h-8 w-auto block" width="84px" height="32px" loading="lazy">
+    </div>
+
+    <!-- Regular Navbar -->
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" class="relative group">
+        <span class="transition-colors duration-300 text-gray-700 group-hover:text-primary">Home</span>
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a routerLink="/about" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" class="relative group">
+        <span class="transition-colors duration-300 text-gray-700 group-hover:text-primary">Über mich</span>
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a routerLink="/projects" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" class="relative group">
+        <span class="transition-colors duration-300 text-gray-700 group-hover:text-primary">Projekte</span>
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button (click)="toggleMenu()" class="relative w-8 h-8 md:hidden z-50 focus:outline-none">
+  <span class="absolute block h-0.5 w-6 bg-primary transition-all duration-300 origin-center top-1/2 left-1/2"
+        [ngClass]="{ 'rotate-45': isMenuOpen, '-translate-y-2': !isMenuOpen, '-translate-x-1/2': true }"></span>
+      <span class="absolute block h-0.5 w-6 bg-primary transition-all duration-300 origin-center top-1/2 left-1/2"
+            [ngClass]="{ 'opacity-0': isMenuOpen, '-translate-x-1/2': true }"></span>
+      <span class="absolute block h-0.5 w-6 bg-primary transition-all duration-300 origin-center top-1/2 left-1/2"
+            [ngClass]="{ '-rotate-45': isMenuOpen, 'translate-y-2': !isMenuOpen, '-translate-x-1/2': true }"></span>
+    </button>
+
+
+  </div>
+
+  <!-- Mobile Nav -->
+  <div *ngIf="isMenuOpen"
+       class="fixed inset-x-0 top-[88px] bg-gray-50 bg-opacity-30 backdrop-blur-md z-40 flex flex-col items-center p-8 space-y-6 animate-slide-down">
+    <a routerLink="/" (click)="closeMenu()"
+       class="text-xl text-gray-700 hover:text-primary transition-colors duration-300">Home</a>
+    <a routerLink="/about" (click)="closeMenu()"
+       class="text-xl text-gray-700 hover:text-primary transition-colors duration-300">Über mich</a>
+    <a routerLink="/projects" (click)="closeMenu()"
+       class="text-xl text-gray-700 hover:text-primary transition-colors duration-300">Projekte</a>
+  </div>
+
+</header>

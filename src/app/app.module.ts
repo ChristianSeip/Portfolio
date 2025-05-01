@@ -3,16 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {SharedModule} from "./shared/shared.module";
+import {TitleStrategy} from '@angular/router';
+import {CustomTitleStrategy} from './core/strategies/custom-title.strategy';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		SharedModule,
+    HttpClientModule
+	],
+  providers: [
+    { provide: TitleStrategy, useClass: CustomTitleStrategy }
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

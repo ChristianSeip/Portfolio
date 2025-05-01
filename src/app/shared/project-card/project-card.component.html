@@ -1,0 +1,25 @@
+<div class="group relative rounded-xl overflow-hidden shadow-lg bg-white transform transition-transform duration-500 hover:scale-[1.03] hover:rotate-[0.5deg] w-full h-[345px]">
+  <div class="relative h-[224px] overflow-hidden">
+    <img [src]="imageUrl" alt="" class="w-full h-full object-cover" loading="lazy" />
+    <div class="absolute bottom-0 left-0 w-full bg-black/60 px-4 py-3 z-20 h-[56px] flex items-center">
+      <h3 class="text-white text-lg font-bold truncate w-full">{{ title }}</h3>
+    </div>
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center p-6 text-white text-sm text-center leading-relaxed z-30">
+      <p class="text-white">{{ description }}</p>
+    </div>
+  </div>
+  <div class="p-4 h-[120px] flex flex-wrap justify-center items-center gap-3 border-t border-gray-100 bg-white">
+    <a *ngIf="githubUrl" [href]="githubUrl" target="_blank"
+       class="px-4 py-2 bg-gray-100 text-sm text-gray-800 font-medium rounded hover:bg-gray-200 transition">
+      GitHub
+    </a>
+    <a *ngIf="liveUrl" [href]="liveUrl" target="_blank"
+       class="px-4 py-2 bg-primary text-sm text-white font-medium rounded hover:bg-primary/90 transition">
+      Live-Demo
+    </a>
+    <a *ngIf="!githubUrl" [routerLink]="detailsUrl"
+       class="px-4 py-2 bg-secondary text-sm text-white font-medium rounded hover:bg-secondary/90 transition">
+      Details
+    </a>
+  </div>
+</div>
