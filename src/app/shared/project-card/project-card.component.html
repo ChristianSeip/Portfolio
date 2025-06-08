@@ -17,7 +17,7 @@
        class="px-4 py-2 bg-primary text-sm text-white font-medium rounded hover:bg-primary/90 transition">
       Live-Demo
     </a>
-    <a *ngIf="!githubUrl" [routerLink]="detailsUrl"
+    <a *ngIf="!githubUrl || !liveUrl" [routerLink]="detailsUrl"
        class="px-4 py-2 bg-secondary text-sm text-white font-medium rounded hover:bg-secondary/90 transition">
       Details
     </a>
